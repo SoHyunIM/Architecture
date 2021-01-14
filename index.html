@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Brando Responsive & Multipurpose OnePage WordPress Theme – Architecture</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
+    <meta name="Title" content="Architeture">
+    <meta name="Publisher" content="프론트엔드 임소현">
+    <meta name="Author-date" content="2020-12_07">
+    <meta name="Author" content="프론트엔드 임소현">
+    <meta name="Copyright" content="프론트엔드 임소현">
+    <meta name="Keywords" content="Architeture, 건축, 예술, 건축양식, 반응형 웹사이트, 웹표준, 웹접근성">
+    <meta name="Description" content="건축은 사람이 사는 조각품입니다.">
+    <meta name="Robots" content="index,follow">
+     
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/icon.JPG">
+    <link rel="apple-touch-icon" href="./img/icon-lunch.png">
+
+    <!-- 오픈 아이콘 -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/response.css">
+    
+
+    <!-- 오픈소스 -->   
+    <script src="./js/lib/jquery-1.12.4.min.js"></script>    
+    <script src="./js/lib/jquery.touchSwipe.js"></script>
+    <script src="./js/lib/prefixfree.min.js"></script>
+    <script src="./js/lib/jquery.easing.1.3.js"></script>
+
+
+
+    <!-- 조건 주석문 익스프롤러 하위 IE9 IE8 IE7 폴리필 -->
+    <!-- 스크립트 스타일 -->
+    
+    <!--[if lte IE 9]>
+        <script src="./js/lib/IE9.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 8]>
+        <script src="./js/lib/html5shiv.min.js"></script>    
+        <script src="./js/lib/jqPIE.js"></script>    
+        <script src="./js/lib/PIE.js"></script> 
+        <link rel="stylesheet" type="text/css" href="./css/ie8.css">   
+    <![endif]-->
+    
+    <!--[if lte IE 7]>    
+       <link rel="stylesheet" type="text/css" href="./css/ie7.css">
+    <![endif]-->    
+    
+
+</head>
+<body id="intro">
+<ul id="skip">
+    <li><a href="#header" title="메뉴바로가기">메뉴바로가기</a></li>
+    <li><a href="#main" title="메인바로가기">메인바로가기</a></li>
+    <li><a href="#footer" title="하단바로가기">하단바로가기</a></li>
+</ul>
+<div id="wrap">
+    <header id="header">
+        <div class="wrap">
+            <div class="gap fixedclear">
+                <div class="left">
+                    <h1 class="logo"><a href="#intro" class="logo-btn smooth-btn" title="logo"><img src="./img/logo-red.png.jpg" alt="logo"></a><i></i></h1>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="#section02" class="main-btn smooth-btn" title="ABOUT">01 ABOUT</a></li>
+                            <li><a href="#section04" class="main-btn smooth-btn" title="SERVICE">02 SERVICE</a></li>
+                            <li><a href="#section06" class="main-btn smooth-btn" title="PROJECTS">03 PROJECTS</a></li>
+                            <li><a href="#section08" class="main-btn smooth-btn" title="PEOPLE">04 PEOPLE</a></li>
+                            <li><a href="#section11" class="main-btn smooth-btn" title="BLOG">05 BLOG</a></li>
+                            <li><a href="#section14" class="main-btn smooth-btn" title="CONTACT">06 CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="right">
+                    <aside id="aside">
+                        <div>
+                            <span><a href="#"><i class="fab fa-facebook-f icon"></i></a></span>  
+                            <span><a href="#"><i class="fab fa-twitter"></i></a></span>  
+                            <span><a href="#"><i class="fab fa-linkedin-in"></i></a></span>  
+                        </div>
+                    </aside>
+                    <div class="mobile">
+                        <a href="#" class="mobile-btn">
+                            <i class="mline mline1"></i>
+                            <i class="mline mline2"></i>
+                            <i class="mline mline3"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-menu">
+                        <ul>
+                            <li><a href="#section02" class="mobile-main-btn smooth-btn">01 ABOUT</a></li>
+                            <li><a href="#section04" class="mobile-main-btn smooth-btn">02 SERVICE</a></li>
+                            <li><a href="#section06" class="mobile-main-btn smooth-btn">03 PROJECTS</a></li>
+                            <li><a href="#section08" class="mobile-main-btn smooth-btn">04 PEOPLE</a></li>
+                            <li><a href="#section11" class="mobile-main-btn smooth-btn">05 BLOG</a></li>
+                            <li><a href="#section14" class="mobile-main-btn smooth-btn">06 CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+<!-- 
+박스 블록의 높이를 강제로 주지말고 반응형 제작
+높이가 항상 일정한 섹션은 높이를 주지만  -->
+
+
+        <section id="section01" class="wheel-event">
+            <h2 class="hide">섹션1 메인슬라이드</h2>
+            <div class="slide-container">
+                <div class="slide-view">
+                    <ul class="slide-wrap">
+                        <li class="slide slide0"><div></div></li>
+                        <li class="slide slide1"><div></div></li>
+                        <li class="slide slide2"><div></div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="title-wrap">
+                <div class="gap">
+                    <h4><i class="blind">아이콘</i></h4>
+                    <p>Architecture is inhabited sculpture.</p>
+                    <h2>A house is a machine for living in</h2>
+                </div>    
+            </div>
+                
+        </section>
+
+
+        <section id="section02" class="wheel-event">
+            <div class="sec02-wrap fixedclear">
+                <div class="sec02-left-wrap fixedclear">
+                    <div class="gap">
+                        <div class="img-wrap">
+                            <img src="./img/architecture-img4_1.jpg" alt="architecture-04">
+                        </div>
+                    </div>
+                </div>
+                <div class="sec02-right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><span>/</span> ABOUT</h3>
+                            <p>
+                                WE BELIEVE IN THE POWER OF DESIGN, THE STRENGTH OF STRATEGY.
+                            </p>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section id="section03" class="wheel-event">
+            <div class="wrap">
+                <div class="left-wrap fixedclear">
+                    <div class="gap">
+                        <nav class="txt-nav">
+                            <ul>
+                                <li><a href="#section03">CREATIVITY</a></li>
+                                <li><a href="#section03">INNOVATION</a></li>
+                                <li><a href="#section03">POINT OF VIEW</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="txt-wrap">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy. Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy.
+                                <br>
+                                <br>
+                                Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy. Lorem Ipsum is simply dummy text of the printing & typesetting industry. Lorem Ipsum has been the industry’s standard dummy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><i class="fas fa-quote-left"></i></h3>
+                            <h4>We see our customers as invited guests to a party, and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better.</h4>
+                            <h5>SHOKO MUGIKURA</h5>
+                            <h6>MICROSOFT INC</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section04" class="wheel-event">
+            <div class="wrap fixedclear">
+                <div class="left-wrap fixedclear">
+                    <div class="gap">
+                        <div class="img-wrap">
+                            <img src="./img/architecture-img5_1.jpg" alt="architecture-05">
+                        </div>
+                    </div>
+                </div>
+                <div class="right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><span>/</span> SERVICE</h3>
+                            <p>
+                                BRANDO IS ONE OF THE WORLD’S LEADING GLOBAL ARCHITECTURE AND DESIGN.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section05" class="wheel-event">
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+                        <ul class="fixedclear">
+                            <li>
+                                <div tabindex="0">
+                                    <h3>01.</h3>
+                                    <h2>ARCHITECTURE</h2>
+                                    <img src="./img/architecture-img6.jpg" alt="architecture-img6">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                                    <h6><i class="blind">아이콘</i></h6>  
+                                </div>
+                            </li>
+                            <li>
+                                <div tabindex="0">
+                                    <h3>02.</h3>
+                                    <h2>CIVIL & STRUCTURAL</h2>
+                                    <img src="./img/architecture-img7.jpg" alt="architecture-img7">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                                    <h6><i class="blind">아이콘</i></h6>  
+                                </div>
+                            </li>
+                            <li>
+                                <div tabindex="0">
+                                    <h3>03.</h3>
+                                    <h2>LANDSCAPE DESIGN</h2>
+                                    <img src="./img/architecture-img8.jpg" alt="architecture-img8">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                                    <h6><i class="blind">아이콘</i></h6>  
+                                </div>
+                            </li>
+                            <li>
+                                <div tabindex="0">
+                                    <h3>04.</h3>
+                                    <h2>URBAN PLANNING</h2>
+                                    <img src="./img/architecture-img9.jpg" alt="architecture-img9">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                                    <h6><i class="blind">아이콘</i></h6>  
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                                    
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="section06" class="wheel-event">
+            <div class="wrap fixedclear">
+                <div class="left-wrap fixedclear">
+                    <div class="gap">
+
+                        <nav class="gallery-nav">
+                            <ul>
+                                <li><a href="#" class="gallery-btn addNav">ALL</a></li>
+                                <li><a href="#" class="gallery-btn">ARCHITECTURE</a></li>
+                                <li><a href="#" class="gallery-btn">CIVIL & STRUCTURAL</a></li>
+                                <li><a href="#" class="gallery-btn">LANDSCAPE DESIGN</a></li>
+                                <li><a href="#" class="gallery-btn">URBAN PLANNING</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="img-wrap">
+                            <img src="./img/red-bg.jpg" alt="redbg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><span>/</span> PROJECTS</h3>
+                            <p>
+                                AN IDEA THAT IS NOT DANGEROUS IS UNWORTHY OF BEING CALLED AN IDEA AT ALL
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section07" class="wheel-event">
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+                        <ul class="gallery fixedclear">
+                            <li>
+                                <div>
+                                   
+                                    <img src='./img/section07-modal-img25.jpg' alt="">
+
+                                
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn gallery-img-caption">
+                                        <h6><i class="blind">아이콘</i></h6>       
+                                        <strong>Amazon at Denny</strong>
+                                        <em>Seattle, WA, USA</em>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+
+                                        <img src='./img/section07-modal-img26.jpg' alt="">
+
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn  gallery-img-caption">  
+                                        <h6><i class="blind">아이콘</i></h6>     
+                                        <strong>Red Hook Innovation</strong>
+                                        <em>Brooklyn, NY, USA</em>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+
+                                        <img src='./img/section07-modal-img27.jpg' alt="">
+       
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn  gallery-img-caption">     
+                                        <h6><i class="blind">아이콘</i></h6>  
+                                        <strong>Rupp Arena Reinvention</strong>
+                                        <em>Lexington, KY, USA</em>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    
+                                        <img src='./img/section07-modal-img28.jpg' alt="">
+                                  
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn gallery-img-caption">  
+                                        <h6><i class="blind">아이콘</i></h6>     
+                                        <strong>Olympic Sports Center</strong>
+                                        <em>Hangzhou, China</em>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src='./img/section07-modal-img29.jpg' alt="">
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn  gallery-img-caption">
+                                        <h6><i class="blind">아이콘</i></h6>       
+                                        <strong>Veterans Health Care</strong>
+                                        <em>New Orleans, LA, USA</em>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src='./img/section07-modal-img30.jpg' alt="">
+ 
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn  gallery-img-caption">  
+                                        <h6><i class="blind">아이콘</i></h6>     
+                                        <strong>Shanghai Hospital</strong>
+                                        <em>Shanghai, China</em>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src='./img/section07-modal-img31.jpg' alt="">
+
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn  gallery-img-caption"> 
+                                        <h6><i class="blind">아이콘</i></h6>      
+                                        <strong>Samsung Headquarters</strong>
+                                        <em>San Jose, CA, USA</em>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src='./img/section07-modal-img32.jpg' alt="">
+                                    <a href="#" title="Amazon at Denny" class="gallery-img-btn  gallery-img-caption">    
+                                        <h6><i class="blind">아이콘</i></h6>   
+                                        <strong>Estrella Medical</strong>
+                                        <em>Phoenix, AZ, USA</em>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section08" class="wheel-event">
+            <div class="wrap fixedclear">
+                <div class="left-wrap fixedclear">
+                    <div class="gap">
+                        <div class="img-wrap">
+                            <img src="./img/architecture-img18_1.jpg" alt="architecture-img18">
+                        </div>
+                    </div>
+                </div>
+                <div class="right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><span>/</span> PEOPLE</h3>
+                            <p>
+                                IF EVERYONE IS MOVING FORWARD TOGETHER, THEN SUCCESS TAKES CARE OF ITSELF.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section09" class="wheel-event">
+            <div class="wrap">
+                <div class="container">
+                    <ul class="fixedclear">
+                        <li tabindex="0">
+                            <div>
+                                <img src="./img/architecture-img19.jpg" alt="architecture-img19">
+                                <div>
+                                    <h2>SANCHO PANSA</h2>
+                                    <h3>CEO, CO-FOUNDER</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                                    <h4>FACEBOOK / TWITTER / LINKEDIN</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0">
+                            <div>
+                                <img src="./img/architecture-img20.jpg" alt="architecture-img20">
+                                <div>
+                                    <h2>HERMAN MILLER</h2>
+                                    <h3>CEO / ARCHITECT</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                                    <h4>FACEBOOK / TWITTER / LINKEDIN</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li tabindex="0">
+                            <div>
+                                <img src="./img/architecture-img21.jpg" alt="architecture-img21">
+                                <div>
+                                    <h2>BRYAN JONHSON</h2>
+                                    <h3>PROJECT MANAGER</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
+                                    <h4>FACEBOOK / TWITTER / LINKEDIN</h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="section10" class="wheel-event">
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+                        <ul class="fixedclear">
+                            <li>
+                                <div>
+                                    <h2>0</h2>
+                                    <h3>HAPPY CLIENTS</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>0</h2>
+                                    <h3>PROJECT COMPLETED</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>0</h2>
+                                    <h3>CUPS OF COFFEE</h3>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <h2>0</h2>
+                                    <h3>AWARD WINNING</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section11" class="wheel-event">
+            <div class="wrap fixedclear">
+                <div class="left-wrap fixedclear">
+                    <div class="gap">
+                        <div class="img-wrap">
+                            <img src="./img/architecture-img22_1.jpg" alt="architecture-img22">
+                        </div>
+                    </div>
+                </div>
+                <div class="right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><span>/</span> RECENT BLOG</h3>
+                            <p>
+                                THERE’S NOTHING WRONG WITH READING A BOOK YOU LOVE OVER AND OVER.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section12" class="wheel-event">
+            <div class="wrap">  
+                <div class="container">  
+                    <ul class="blog">
+                        <li class="fixedclear">
+                            <div>
+                                <a href="#" title="blog" class="blog-img-btn">                          
+                                    <img src="./img/architecture-img23.jpg" alt="img23"> 
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div> 
+                                <div> 
+                                    <h3><a href="#" title="MARCH 26, 2016">MARCH 26, 2016</a></h3> 
+                                    <p><a href="#" title="ARCHITECTURE IS THE ART OF HOW TO WASTE SPACE.">ARCHITECTURE IS THE ART OF HOW TO WASTE SPACE.</a></p> 
+                                    <h6><i class="blind">아이콘</i></h6> 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" title="blog" class="blog-img-btn">                          
+                                    <img src="./img/architecture-img24.jpg" alt="img24"> 
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div> 
+                                <div> 
+                                    <h3><a href="#" title="MARCH 26, 2016">MARCH 26, 2016</a></h3> 
+                                    <p><a href="#" title="WHATEVER GOOD THINGS WE BUILD END UP BUILDING US.">WHATEVER GOOD THINGS WE BUILD END UP BUILDING US.</a></p> 
+                                    <h6><i class="blind">아이콘</i></h6> 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div> 
+                                <div>
+                                    <h3><a href="#" title="MARCH 26, 2016">MARCH 26, 2016</a></h3> 
+                                    <p><a href="#" title="THE BUILDING’S IDENTITY RESIDED IN THE ORNAMENT.">THE BUILDING’S IDENTITY RESIDED IN THE ORNAMENT.</a></p> 
+                                    <h6><i class="blind">아이콘</i></h6> 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" title="blog" class="blog-img-btn">                          
+                                    <img src="./img/architecture-img25.jpg" alt="img25"> 
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div> 
+                                <div> 
+                                    <h3><a href="#" title="MARCH 26, 2016">MARCH 26, 2016</a></h3> 
+                                    <p><a href="#" title="ARCHITECTURE IS THE REACHING OUT FOR THE TRUTH.">ARCHITECTURE IS THE REACHING OUT FOR THE TRUTH.</a></p> 
+                                    <h6><i class="blind">아이콘</i></h6> 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#" title="blog" class="blog-img-btn">                          
+                                    <img src="./img/architecture-img26.jpg" alt="architecture-img23.jpg.jpg"> 
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="section13" class="wheel-event">
+            <div class="wrap fixedclear">
+                <div class="left-wrap fixedclear">
+                    <div class="gap">
+                        <ul>
+                            <li>
+                                <div class="row-01-img">
+                                    <img src="./img/architecture-img27-1.jpg" alt="img27-1">
+                                </div>
+                            <li>
+                            <li>
+                                <div class="row-01-txt">
+                                    <h3><i class="fas fa-quote-left"></i></h3>
+                                    <h4>The best customer service is if the customer doesn’t need to call you, doesn’t need to talk to you. It just works.</h4>
+                                    <h5>PAUL SCRIVENS</h5>
+                                    <h6>GOOGLE INC</h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row-02-img">
+                                    <img src="./img/architecture-img28-1.jpg" alt="img28-1">
+                                </div>
+                            <li>
+                            <li>
+                                <div class="row-02-txt">
+                                    <h3><i class="fas fa-quote-left"></i></h3>
+                                    <h4>The best customer service is if the customer doesn’t need to call you, doesn’t need to talk to you. It just works.</h4>
+                                    <h5>NATHAN FORD</h5>
+                                    <h6>FACEBOOK INC</h6>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><i class="fas fa-quote-left"></i></h3>
+                            <h4>We see our customers as invited guests to a party, and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better.</h4>
+                            <h5>SHOKO MUGIKURA</h5>
+                            <h6>MICROSOFT INC</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section14" class="wheel-event">
+            <div class="wrap fixedclear">
+                <div class="left-wrap fixedclear">
+                    <div class="gap">
+                        <div class="img-wrap">
+                            <img src="./img/architecture-img29_1.jpg" alt="architecture-img29">
+                        </div>
+                    </div>
+                </div>
+                <div class="right-wrap fixedclear">
+                    <div class="gap">
+                        <div class="content">
+                            <h3><span>/</span> CONTACT</h3>
+                            <p>
+                                WHO YOU ARE IS SPEAKING SO LOUDLY THAT I CAN’T HEAR WHAT YOU’RE SAYING.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section15" class="wheel-event">
+            <div class="wrap">
+                <div class="gap">
+                    <div class="container">
+                        <ul class="fixedclear">
+                            <li class="left">
+                                <div>
+                                    <!-- 폼전송 -->
+                                    <form name="contact" id="contact"  method="post" action="response.php">
+                                        <ul>
+                                            <li>
+                                                <div><input type="text" name="irum" id="irum" placeholder="YOUR NAME"></div>
+                                            </li>
+                                            <li>
+                                                <div><input type="email" name="mail" id="mail" placeholder="YOUR EMAIL"></div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                   <select name="interested" id="interested">
+                                                       <option value="WHAT ARE YOU INTERESTED IN?">WHAT ARE YOU INTERESTED IN?</option>
+                                                       <option value="Architecture">Architecture</option>
+                                                       <option value="Civil & Structural">Civil & Structural</option>
+                                                       <option value="Landscape Design">Landscape Design</option>
+                                                       <option value="Urban Planning">Urban Planning</option>
+                                                       <option value="Other">Other</option>
+                                                   </select>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <textarea name="message" id="message" placeholder="YOUR MESSAGE"></textarea>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <input type="submit" name="submit" id="submit" value="SUBMIT">
+                                                    <span class="ajax-loader">
+                                                        <img src="./img/ajax-loader.gif" alt="AJAX Loader Image">
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="error-message">
+                                                <div>Validation errors occurred. Please confirm the fields and submit it again.</div>
+                                            </li>
+                                            <li class="success-message">
+                                                <div>Your message was sent successfully. Thanks.</div>
+                                                <div class="ajax-response">AJAX내용 입니다</div>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </li>
+                            
+                            <li class="right">
+                                <div> <!-- margin:0 15px -->
+                                    <ul class="fixedclear">
+                                        <li>
+                                            <div class="icon-wrap"><span><i class="icon-map-pin"></i></span></div>
+                                            <div class="text-wrap">
+                                                <h4>OUR STUDIO</h4>
+                                                <h5>301 The Greenhouse, Custard<br> Factory, London, E2 8DY.</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-wrap"><span><i class="icon-clipboard"></i></span></div>
+                                            <div class="text-wrap">
+                                                <h4>GENERAL ENQUIRIES</h4>
+                                                <h5>sales@domain.com</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon-wrap"><span><i class="icon-phone"></i></span></div>
+                                            <div class="text-wrap">
+                                                <h4>CALL US</h4>
+                                                <h5>+44 (0) 123 456 7890</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="wheel-event">
+        <div class="wrap">
+            <div class="gap">
+                <ul class="icons">
+                <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>  
+                <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>  
+                <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>  
+                <li><a href="#" title="youtube"><i class="fab fa-youtube"></i></a></li>  
+                <li><a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a></li>  
+                </ul>
+
+                <div class="logo-copyright">
+                    <span>&copy; 2020 BRANDO IS PROUDLY POWERED BY THEMEZAA.</span>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+        <!-- 고 탑 -->
+        <div class="goTop">
+            <a href="#wrap" class="goTop-btn smooth-btn">
+                <span class="arrow-up">
+                    <i></i>
+                    <span class="text-top blind">화살표</span>
+                </span>
+            </a>
+        </div>
+
+
+
+        <!-- 모달창 = 레이어팝업 -->
+        <div class="modal">
+            <div class="img-wrap">
+                <a href="javascript:" class="img-btn" title="image"><img src="./img/section07-modal-img25.jpg" alt=""></a>
+            </div>
+    
+            <span class="arrow-left">
+                <a href="javascript:" class="arrow-left-btn"><i class="fas fa-chevron-circle-left"></i></a>
+            </span>
+            <span class="arrow-right">
+                <a href="javascript:" class="arrow-right-btn"><i class="fas fa-chevron-circle-right"></i></a>
+            </span>
+    
+            <span class="close">
+                <a href="javascript:" class="close-btn" title="Close">×</a>
+            </span>
+    
+        </div>
+
+
+    <!-- 사용자 제작     -->
+    <script src="./js/brando_architecture.js"></script>
+
+
+<!--     <div class="w3c-html5">
+        <p>
+            <a href="http://validator.kldp.org/check?uri=referer"
+              onclick="this.href=this.href.replace(/referer$/,encodeURIComponent(document.URL))"><img
+              src="//validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5" height="15" width="80">
+            </a>
+        </p> 
+    </div> -->
+
+</div>
+</body>
+</html>
